@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Class 10 Revision Planner</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Figtree:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Figtree:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--bg:#d8e1e8;--card:#fff;--ink:#1d2a47;--mut:#556583;--line:#c6d3e3;--acc:#304674;--soft:#eef2f7;--hero:#304674;--hero2:#46629a;--shadow:0 10px 26px -14px rgba(48,70,116,.45);
+--M:#304674;--S:#5b8db5;--E:#98bad5;--H:#46629a;--SS:#7a9fc0;--C:#b2cbde;--X:#6c7fa3}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1a2f;--card:#172542;--ink:#e4ecf6;--mut:#9fb2cc;--line:#2a3c60;--acc:#98bad5;--soft:#1e2f52;--hero:#1b2c52;--hero2:#304674;--shadow:0 10px 26px -14px rgba(0,0,0,.7);
+--M:#8fb0e0;--S:#6fa3cc;--E:#98bad5;--H:#7c97cf;--SS:#a9c4dc;--C:#c6d3e3;--X:#8ea0c0}}
+:root[data-theme="dark"]{--bg:#0f1a2f;--card:#172542;--ink:#e4ecf6;--mut:#9fb2cc;--line:#2a3c60;--acc:#98bad5;--soft:#1e2f52;--hero:#1b2c52;--hero2:#304674;--shadow:0 10px 26px -14px rgba(0,0,0,.7);
+--M:#8fb0e0;--S:#6fa3cc;--E:#98bad5;--H:#7c97cf;--SS:#a9c4dc;--C:#c6d3e3;--X:#8ea0c0}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 "Figtree","Segoe UI","Noto Sans","Noto Sans Devanagari",system-ui,sans-serif}
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--hero);color:#fff;border-bottom:1px solid rgba(255,255,255,.14)}
+.nav .in{max-width:760px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{font:800 1.05rem "Bricolage Grotesque","Figtree",sans-serif;letter-spacing:-.01em}
+.nav nav{display:flex;gap:4px;overflow-x:auto}
+.nav a{color:#d8e1e8;text-decoration:none;font-weight:700;font-size:.9rem;padding:6px 10px;border-radius:8px;white-space:nowrap}
+.nav a:hover{background:rgba(255,255,255,.14);color:#fff}
+.hero{background:radial-gradient(520px 260px at 90% 0%,rgba(152,186,213,.42),transparent 65%),linear-gradient(160deg,var(--hero),var(--hero2));color:#fff;padding:34px 16px 36px;border-radius:0 0 30px 30px}
+.hero .in{max-width:760px;margin:0 auto}
+h1{font:800 2.2rem/1.08 "Bricolage Grotesque","Figtree",sans-serif;letter-spacing:-.025em;margin:0 0 8px;max-width:14em}
+.sub{color:#d8e1e8;margin:0 0 20px;font-size:1rem;max-width:34em}
+.top{display:flex;gap:12px;flex-wrap:wrap;align-items:end;margin-bottom:18px}
+.top label{font-size:.82rem;color:#c6d3e3;display:flex;flex-direction:column;gap:4px}
+input[type=date]{font:inherit;padding:9px 11px;border:1px solid rgba(255,255,255,.4);border-radius:10px;background:rgba(255,255,255,.12);color:#fff;color-scheme:dark}
+button{font:inherit;cursor:pointer}
+#today{padding:10px 15px;border:0;background:#d8e1e8;color:#304674;border-radius:10px;font-weight:700}
+.bar{height:12px;background:rgba(255,255,255,.2);border-radius:8px;overflow:hidden}
+.bar i{display:block;height:100%;background:linear-gradient(90deg,#98bad5,#d8e1e8);width:0;border-radius:8px;transition:width .35s}
+.pt{font-size:.92rem;color:#d8e1e8;margin:8px 0 0;font-weight:500}
+.chips{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:20px}
+.chips div{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);border-radius:14px;padding:10px 12px}
+.chips b{display:block;font:800 1.5rem/1.1 "Bricolage Grotesque","Figtree",sans-serif}
+.chips span{font-size:.8rem;color:#c6d3e3}
+.saved{font-size:.82rem;color:#c6d3e3;margin:16px 0 0}
+main{max-width:760px;margin:0 auto;padding:8px 16px 40px}
+.sec{font:800 1.5rem "Bricolage Grotesque","Figtree",sans-serif;letter-spacing:-.015em;margin:34px 0 4px}
+.secs{color:var(--mut);margin:0 0 4px;font-size:.93rem}
+.wk{font:700 .88rem "Figtree",sans-serif;color:var(--acc);margin:20px 0 10px;display:flex;align-items:center;gap:10px}
+.wk::after{content:"";flex:1;height:1px;background:var(--line)}
+.g{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.d{border:2px solid transparent;background:var(--card);color:var(--ink);border-radius:14px;padding:10px 0 9px;display:flex;flex-direction:column;align-items:center;gap:6px;font:800 1.1rem "Bricolage Grotesque","Figtree",sans-serif;box-shadow:var(--shadow);transition:transform .15s}
+.d:hover{transform:translateY(-2px)}
+.d span{display:flex;gap:4px}
+.d b{width:8px;height:8px;border-radius:50%;background:var(--line)}
+.d b.y{background:var(--acc)}
+.d.sel{border-color:var(--acc)}
+.d.full{background:var(--acc);color:var(--card)}
+.d.full b{background:var(--card)}
+.d.full.sel{box-shadow:0 0 0 3px var(--bg),0 0 0 5px var(--acc)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:20px 18px;margin-top:26px;box-shadow:var(--shadow)}
+.card h2{font:800 1.45rem "Bricolage Grotesque","Figtree",sans-serif;letter-spacing:-.01em;margin:0}
+.card .wn{color:var(--mut);font-size:.9rem;margin:2px 0 14px}
+.s{display:flex;gap:14px;align-items:flex-start;padding:14px;margin-top:10px;border-radius:14px;background:color-mix(in srgb,var(--c) 14%,var(--card));border:1px solid color-mix(in srgb,var(--c) 30%,var(--line));border-left:7px solid var(--c);cursor:pointer}
+.s input{width:24px;height:24px;margin:2px 0 0;accent-color:var(--acc);flex:none}
+.s .n{font-weight:700;font-size:.95rem}
+.s .h{color:var(--mut);font-size:.82rem;font-weight:500}
+.s .t{font-weight:500}
+.s.ok{opacity:.7}
+.s.ok .t{text-decoration:line-through;color:var(--mut)}
+.f{margin:16px 0 0;padding:12px 14px;background:var(--soft);border-left:4px solid var(--acc);border-radius:10px;font-size:.93rem}
+.nt{display:block;margin-top:16px;font-weight:700;font-size:.9rem}
+.nt textarea{display:block;width:100%;margin-top:6px;font:inherit;font-weight:400;padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:var(--soft);color:var(--ink);resize:vertical}
+.nav2{display:flex;justify-content:space-between;margin-top:16px;gap:10px}
+.btn{padding:10px 16px;border:1px solid var(--line);background:var(--soft);color:var(--ink);border-radius:12px;font-weight:700}
+.btn:disabled{opacity:.4;cursor:default}
+.sb{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:12px 14px;margin-top:10px;box-shadow:var(--shadow)}
+.sb div{display:flex;justify-content:space-between;font-weight:700;font-size:.95rem;margin-bottom:7px}
+.sb em{font-style:normal;color:var(--mut);font-weight:500}
+.sb i{display:block;height:9px;background:var(--line);border-radius:6px;overflow:hidden}
+.sb i u{display:block;height:100%;background:var(--c);border-radius:6px;transition:width .3s}
+.tips{display:grid;gap:10px;margin:12px 0 0;padding:0;list-style:none;counter-reset:t}
+.tips li{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px 12px 48px;position:relative;font-size:.95rem;box-shadow:var(--shadow)}
+.tips li::before{counter-increment:t;content:counter(t);position:absolute;left:12px;top:11px;width:26px;height:26px;border-radius:50%;background:var(--acc);color:var(--card);font-weight:800;font-size:.85rem;display:grid;place-items:center}
+footer{text-align:center;color:var(--mut);font-size:.85rem;padding:8px 16px 36px}
+button:focus-visible,input:focus-visible,textarea:focus-visible,a:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+@media (min-width:640px){.tips{grid-template-columns:1fr 1fr}h1{font-size:2.7rem}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+.acct{margin-top:18px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:16px;padding:14px}
+.acct b{font:800 1.05rem "Bricolage Grotesque","Figtree",sans-serif}
+.acct p{margin:4px 0 10px;font-size:.88rem;color:#d8e1e8}
+.af{display:grid;gap:8px;grid-template-columns:1fr 1fr}
+@media (max-width:520px){.af{grid-template-columns:1fr}}
+.acct input{font:inherit;padding:10px 12px;border-radius:10px;border:1px solid rgba(255,255,255,.4);background:rgba(255,255,255,.14);color:#fff;min-width:0}
+.acct input::placeholder{color:#c6d3e3}
+.ab{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.acct button{padding:9px 14px;border:0;border-radius:10px;font-weight:700;background:#d8e1e8;color:#304674}
+.acct button[data-a=reg],.acct button[data-a=out]{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.5)}
+.acct button:disabled{opacity:.55}
+#amsg{margin-top:8px;font-size:.86rem;color:#d8e1e8;min-height:1.2em}
+</style></head><body><div class="nav"><div class="in"><span class="brand">Class 10 Planner</span><nav><a href="#home">Home</a><a href="#planner">Planner</a><a href="#subjects">Subjects</a><a href="#tips">Tips</a></nav></div></div>
+<header class="hero" id="home"><div class="in">
+<h1>Revise the whole Class 10 syllabus in 30 days</h1>
+<p class="sub">About 4 hours a day, one clear plan. Tick each session as you finish it and watch your progress grow.</p>
+<div class="top">
+<label>Start date<input type="date" id="start"></label>
+<button id="today" hidden>Go to today</button>
+</div>
+<div class="bar"><i id="fill"></i></div>
+<div class="pt" id="pt"></div>
+<div class="chips"><div><b id="c1">0</b><span>days completed</span></div><div><b id="c2">0</b><span>hours studied</span></div><div><b id="c3">0%</b><span>of plan done</span></div></div>
+<div class="acct" id="acct"></div>
+<p class="saved">Your ticks, start date and notes always save on this device. Sign in to keep them in sync on every device.</p>
+</div></header>
+<main>
+<section id="planner"><h2 class="sec">Daily planner</h2><p class="secs">Pick a day to see its three sessions.</p>
+<div id="grid"></div>
+<section class="card" id="det"></section></section>
+<section id="subjects"><h2 class="sec">Subject progress</h2><p class="secs">Sessions finished in each subject.</p><div id="stats"></div></section>
+<section id="tips"><h2 class="sec">Study tips</h2><ol class="tips"><li>Test yourself instead of re-reading: flashcards, covered answers, explaining aloud.</li><li>Solve every NCERT example and exercise, then previous year papers (at least the last 5).</li><li>Draw and label key science diagrams; they carry marks.</li><li>Use mind maps for Science and Social Science; keep short notes of formulas, definitions and dates.</li><li>Practise timed writing for languages and SST: format, vocabulary, structure.</li><li>Study 45–60 minutes, then break 5–10 minutes; take 30 minutes after every 2–3 hours.</li><li>Sleep 7–8 hours, eat balanced meals, drink water, walk a little each day.</li><li>Give extra time to weak areas, and stay calm: revision refines what you know.</li></ol></section>
+</main>
+<footer>Good luck with your exams.</footer>
+<script>
+const SUB={M:"Maths",S:"Science",E:"English",H:"Hindi",SS:"Social Science",C:"Computer",X:"Revision"};
+const WK=["Week 1: Foundations and Chemistry","Week 2: Physics and History","Week 3: Trigonometry, Biology and Civics","Week 4: Mensuration, Statistics and Geography","Week 5: Biology, Economics and full review","Week 6: Intensive revision and mock tests"];
+const HR=["1.5 hrs","1.5 hrs","1 hr"];
+const D=[
+[["M","Ch 1 Real Numbers, Ch 2 Polynomials"],["S","Ch 1 Chemical Reactions and Equations"],["E","Prose: A Letter to God, Nelson Mandela"],"Maths: concepts and NCERT questions. Science: balancing, reaction types. English: central idea, characters."],
+[["M","Ch 3 Pair of Linear Equations: graphical, substitution, elimination"],["S","Ch 2 Acids, Bases and Salts, part 1"],["H","क्षितिज काव्य: सूरदास (पद), तुलसीदास (राम-लक्ष्मण-परशुराम संवाद)"],"Maths: solve many equations. Science: definitions, indicators, pH scale. Hindi: भावार्थ, काव्य-सौंदर्य।"],
+[["M","Ch 3 Linear Equations: consistency, word problems"],["S","Ch 2 Acids, Bases and Salts, part 2"],["E","Grammar: Tenses, Modals, Subject-Verb Concord"],"Maths: word-problem strategies. Science: importance of pH, common salts. English: rules and exercises."],
+[["M","Ch 4 Quadratic Equations: standard form, factorisation"],["SS","History Ch 1: The Rise of Nationalism in Europe"],["C","Part A Units 1–2: Communication Skills-II, Self-Management Skills-II"],"Maths: factorisation. SST: key events and leaders. Computer: definitions and examples."],
+[["M","Ch 4 Quadratic Equations: formula, discriminant, nature of roots, word problems"],["S","Ch 3 Metals and Non-metals, part 1"],["H","कृतिका भाग-2: माता का अँचल"],"Maths: formula application. Science: properties, reactivity series. Hindi: कहानी का सार, पात्र-चित्रण।"],
+[["M","Ch 5 Arithmetic Progressions: general term, sum of n terms"],["S","Ch 3 Metals and Non-metals, part 2; Ch 4 Carbon and Its Compounds, part 1"],["E","Poems: Dust of Snow, Fire and Ice, A Tiger in the Zoo"],"Maths: formulas, word problems. Science: ionic compounds, extraction, covalent bonding. English: poetic devices, theme."],
+[["M","Ch 5 Arithmetic Progressions: applications, word problems"],["S","Ch 4 Carbon, part 2; Ch 5 Periodic Classification of Elements"],["SS","History Ch 2: Nationalism in India"],"Maths: varied problems. Science: hydrocarbons, functional groups, periodic table. SST: movements, leaders, dates."],
+[["M","Ch 6 Triangles: similarity, BPT, criteria for similarity"],["S","Ch 6 Light: Reflection and Refraction, part 1"],["H","क्षितिज गद्य: नेताजी का चश्मा, बालगोबिन भगत"],"Maths: theorems, proofs, examples. Science: mirror ray diagrams, mirror formula. Hindi: संदेश, पात्रों की विशेषताएँ।"],
+[["M","Ch 6 Triangles: areas of similar triangles, Pythagoras theorem"],["S","Ch 6 Light, part 2: lenses"],["E","Prose: Two Stories About Flying, From the Diary of Anne Frank"],"Maths: areas and Pythagoras. Science: lens ray diagrams, lens formula, power. English: themes, diary entries."],
+[["M","Ch 7 Coordinate Geometry: distance, section formula, area of triangle"],["SS","History Ch 3: The Making of a Global World"],["C","Part A Units 3–5: ICT Skills-II, Entrepreneurial Skills-II, Green Skills-II"],"Maths: formulas, plotting points. SST: global links, economic change. Computer: concepts, benefits, challenges."],
+[["M","Ch 8 Introduction to Trigonometry: ratios, complementary angles"],["S","Ch 7 Human Eye and the Colourful World"],["H","व्याकरण: वाक्य भेद (सरल, मिश्र, संयुक्त), वाच्य"],"Maths: identities, basic problems. Science: eye defects, prism, dispersion. Hindi: नियम और अभ्यास।"],
+[["M","Ch 8 Trigonometry: identities"],["S","Ch 8 Electricity, part 1: current, potential difference, resistance, Ohm's law"],["E","Footprints Without Feet: A Triumph of Surgery, The Thief's Story"],"Maths: prove identities. Science: definitions, formulas, Ohm's law problems. English: plots, character analysis."],
+[["M","Ch 9 Some Applications of Trigonometry: heights and distances"],["S","Ch 8 Electricity, part 2: series/parallel, heating effect, power"],["SS","Civics Ch 1 Power Sharing, Ch 2 Federalism"],"Maths: draw diagrams, solve word problems. Science: circuits, power and energy. SST: Belgium, Sri Lanka, features of federalism."],
+[["M","Ch 10 Circles: tangent properties"],["S","Ch 9 Magnetic Effects of Electric Current, part 1"],["H","क्षितिज काव्य: आत्मकथ्य, उत्साह और अट नहीं रही"],"Maths: theorems and proofs. Science: field patterns, right-hand thumb rule. Hindi: भावार्थ, प्रतीकात्मकता।"],
+[["M","Ch 11 Areas Related to Circles: sector and segment"],["S","Ch 9 Magnetic Effects, part 2"],["E","Grammar: Reported Speech (commands, requests, statements, questions)"],"Maths: formulas, combined shapes. Science: solenoid, Fleming's rules, generator. English: conversion rules."],
+[["M","Ch 12 Surface Areas and Volumes, part 1: combination of solids"],["S","Ch 10 Life Processes, part 1: nutrition, respiration"],["SS","Civics Ch 3 Gender, Religion and Caste; Ch 4 Political Parties"],"Maths: visualise shapes. Science: digestion and respiration diagrams. SST: key terms, issues, challenges."],
+[["M","Ch 12 Surface Areas and Volumes, part 2: conversion of solids, frustum"],["S","Ch 10 Life Processes, part 2: transportation, excretion"],["E","Prose: Glimpses of India, Mijbil the Otter"],"Maths: complex problems, frustum formula. Science: circulatory and excretory diagrams, plant transport. English: descriptive details."],
+[["M","Ch 13 Statistics: mean, median, mode (grouped data)"],["S","Ch 11 Control and Coordination, part 1: nervous system, brain, reflex action"],["H","कृतिका: साना-साना हाथ जोड़ि, मैं क्यों लिखता हूँ"],"Maths: formulas, data interpretation. Science: neuron diagram, brain parts. Hindi: यात्रा वृत्तांत, लेखक का उद्देश्य।"],
+[["M","Ch 13 Statistics: cumulative frequency, graphs, ogives"],["S","Ch 11 Control and Coordination, part 2: plant and animal hormones"],["SS","Geography Ch 1 Resources and Development, Ch 2 Forest and Wildlife Resources"],"Maths: ogives, interpretation. Science: hormones, endocrine glands, feedback. SST: resource types, conservation."],
+[["M","Ch 14 Probability: classical probability, simple problems"],["S","Ch 12 How Do Organisms Reproduce?, part 1: asexual and plant reproduction"],["C","Part B Units 1–2: Digital Documentation, Electronic Spreadsheet (advanced)"],"Maths: sample space basics. Science: plant reproduction diagrams. Computer: styles, templates, advanced formulas, macros."],
+[["SS","Geography Ch 3 Water Resources, Ch 4 Agriculture"],["S","Ch 12 Reproduction, part 2: human reproductive system, reproductive health"],["E","Writing: formal letter, analytical paragraph"],"SST: water conservation, farming types, major crops. Science: diagrams, menstrual cycle, contraception. English: format practice."],
+[["SS","Geography Ch 5 Minerals and Energy Resources, Ch 6 Manufacturing Industries"],["S","Ch 13 Heredity, part 1: variation, Mendel's experiments"],["H","लेखन कौशल: अनुच्छेद, औपचारिक पत्र"],"SST: resource classes, industries, pollution. Science: genetic terms, Mendel's laws, crosses. Hindi: प्रारूप, क्रमबद्धता।"],
+[["SS","Geography Ch 7 Lifelines of National Economy, plus map work"],["S","Ch 13 Heredity, part 2: sex determination, evolution, acquired and inherited traits"],["E","Reading: unseen passage, case-based factual passage"],"SST: transport, communication, trade. Science: evolution evidence. English: skimming, scanning, vocabulary."],
+[["SS","Economics Ch 1 Development, Ch 2 Sectors of the Indian Economy"],["S","Ch 14 Our Environment"],["H","लेखन कौशल: विज्ञापन, ई-मेल; अपठित गद्यांश"],"SST: development indicators, sectors, employment. Science: food chains, ozone layer, waste. Hindi: आकर्षक शीर्षक, संक्षिप्त भाषा।"],
+[["SS","Economics Ch 3 Money and Credit, Ch 4 Globalisation and the Indian Economy"],["C","Part B Units 3–4: Database Management System, Web Applications and Security"],["E","Footprints Without Feet: The Midnight Visitor, A Question of Trust"],"SST: money, credit, MNCs, WTO. Computer: database concepts, queries, cyber threats. English: suspense, irony, character traits."],
+[["M","Full Maths revision: formulas, theorems, tricky questions; one chapter per unit"],["SS","Economics Ch 5 Consumer Rights; quick review of remaining History and Civics"],["H","व्याकरण: पद परिचय, अलंकार (उपमा, रूपक, उत्प्रेक्षा, अतिशयोक्ति, मानवीकरण)"],"Maths: focus on weak areas. SST: quick recall. Hindi: परिभाषा, उदाहरण, अभ्यास।"],
+[["S","Full Science revision, Biology first: key diagrams, definitions, differences, experiments"],["E","Footprints: The Making of a Scientist, The Necklace, Bholi, The Book That Saved the Earth"],["H","अपठित काव्यांश; quick review of Kshitij prose and Kritika"],"Science: recall all Bio chapters. English: themes, morals, characters. Hindi: काव्यगत विशेषताएँ, भावार्थ।"],
+[["S","Physics and Chemistry quick review: formulas, concepts, balancing"],["E","Full English revision: literature, grammar, writing, reading"],["C","Full Computer review: Parts A and B, key terms and applications"],"Science: numericals for Physics and Chemistry. English: mixed questions, timing. Computer: definitions, short answers."],
+[["X","Mock test 1: full-length Science or Maths sample paper (3 hrs)"],["X","Review the mock: analyse mistakes, revise weak areas"],["X","Quick review of Hindi and English writing formats, common errors"],"Exam conditions, then self-correction."],
+[["X","Mock test 2: full-length SST or language (Hindi and English) sample paper (3 hrs)"],["X","Final scan of all subjects: formulas, dates, definitions"],["X","Relax, or light current affairs (optional)"],"Build confidence, light review. Trust your preparation."]
+];
+const $=s=>document.querySelector(s);
+let st={done:{},sel:0,start:""};
+try{Object.assign(st,JSON.parse(localStorage.getItem("p10")||"{}"))}catch(e){}
+const save=()=>{st.t=Date.now();try{localStorage.setItem("p10",JSON.stringify(st))}catch(e){}sched()};
+const dn=d=>[0,1,2].filter(i=>st.done[d+"-"+i]).length;
+const dt=d=>{if(!st.start)return"";const t=new Date(st.start+"T00:00");t.setDate(t.getDate()+d);return t.toLocaleDateString(undefined,{weekday:"short",day:"numeric",month:"short"})};
+const todayIdx=()=>{if(!st.start)return -1;const a=new Date(st.start+"T00:00"),b=new Date();b.setHours(0,0,0,0);const i=Math.round((b-a)/864e5);return i>=0&&i<30?i:-1};
+function draw(){
+ let tot=0;for(let d=0;d<30;d++)tot+=dn(d);
+ $("#fill").style.width=tot/90*100+"%";
+ $("#pt").textContent=tot+" of 90 sessions done";
+ $("#today").hidden=todayIdx()<0;
+ let g="";
+ WK.forEach((w,wi)=>{g+=`<div class="wk">${w}</div><div class="g">`;
+  for(let d=wi*5;d<wi*5+5;d++){const n=dn(d);
+   g+=`<button class="d${d==st.sel?" sel":""}${n==3?" full":""}" data-d="${d}" aria-label="Day ${d+1}, ${n} of 3 done"><span>${d+1}</span><span>${[0,1,2].map(i=>`<b class="${st.done[d+"-"+i]?"y":""}"></b>`).join("")}</span></button>`}
+  g+="</div>"});
+ $("#grid").innerHTML=g;
+ const d=st.sel,x=D[d];
+ $("#det").innerHTML=`<h2>Day ${d+1}${st.start?" · "+dt(d):""}</h2><div class="wn">${WK[Math.floor(d/5)]}</div>`+
+ x.slice(0,3).map((s,i)=>`<label class="s${st.done[d+"-"+i]?" ok":""}" style="--c:var(--${s[0]})"><input type="checkbox" data-i="${i}"${st.done[d+"-"+i]?" checked":""}><span><span class="n">${SUB[s[0]]} <span class="h">· ${HR[i]}</span></span><br><span class="t">${s[1]}</span></span></label>`).join("")+
+ `<p class="f">${x[3]}</p><div class="nav2"><button class="btn" data-go="-1"${d==0?" disabled":""}>Previous day</button><button class="btn" data-go="1"${d==29?" disabled":""}>Next day</button></div>`;
+}
+document.addEventListener("click",e=>{
+ const b=e.target.closest("[data-d]");if(b){st.sel=+b.dataset.d;save();draw();$("#det").scrollIntoView({behavior:"smooth",block:"nearest"});return}
+ const n=e.target.closest("[data-go]");if(n){st.sel=Math.min(29,Math.max(0,st.sel+ +n.dataset.go));save();draw()}
+});
+document.addEventListener("change",e=>{
+ if(e.target.dataset.i!==undefined){const k=st.sel+"-"+e.target.dataset.i;if(e.target.checked)st.done[k]=1;else delete st.done[k];save();draw()}
+});
+$("#start").value=st.start;
+$("#start").addEventListener("change",e=>{st.start=e.target.value;const t=todayIdx();if(t>=0)st.sel=t;save();draw()});
+$("#today").addEventListener("click",()=>{st.sel=todayIdx();save();draw()});
+st.notes=st.notes||{};
+const esc=v=>v.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const HRS=[1.5,1.5,1];
+const _d=draw;
+draw=function(){_d();extra()};
+function extra(){
+ const d=st.sel;
+ $("#det").insertAdjacentHTML("beforeend",`<label class="nt">My notes for day ${d+1}<textarea data-note="${d}" rows="3" placeholder="Weak topics, doubts, practice scores...">${esc(st.notes[d]||"")}</textarea></label>`);
+ let tot=0,days=0,hrs=0;const by={};
+ for(let i=0;i<30;i++){const n=dn(i);tot+=n;if(n==3)days++;
+  D[i].slice(0,3).forEach((x,j)=>{const c=by[x[0]]=by[x[0]]||[0,0];c[1]++;if(st.done[i+"-"+j]){c[0]++;hrs+=HRS[j]}})}
+ $("#c1").textContent=days;$("#c2").textContent=hrs;$("#c3").textContent=Math.round(tot/90*100)+"%";
+ $("#stats").innerHTML=Object.keys(SUB).filter(k=>by[k]).map(k=>`<div class="sb" style="--c:var(--${k})"><div><span>${SUB[k]}</span><em>${by[k][0]} of ${by[k][1]}</em></div><i><u style="width:${by[k][0]/by[k][1]*100}%"></u></i></div>`).join("");
+}
+document.addEventListener("input",e=>{const n=e.target.dataset.note;if(n!==undefined){st.notes[n]=e.target.value;save()}});
+addEventListener("pagehide",()=>{try{localStorage.setItem("p10",JSON.stringify(st))}catch(e){}});
+try{navigator.storage&&navigator.storage.persist&&navigator.storage.persist()}catch(e){}
+{const t=todayIdx();if(t>=0)st.sel=t}
+draw();
+
+/* ---------- accounts + cross-device sync ---------- */
+const AK="p10auth";let au=null,lastMsg="";
+try{au=JSON.parse(localStorage.getItem(AK)||"null")}catch(e){}
+const api=async b=>{const r=await fetch("/api/sync",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(b)});let j={};try{j=await r.json()}catch(e){}
+ if(!r.ok)throw Object.assign(new Error(j.error||(r.status==404?"Sync isn't set up on this site yet.":"Request failed")),{status:r.status});return j};
+const snap=()=>({done:st.done,sel:st.sel,start:st.start,notes:st.notes,t:st.t||0});
+const clock=()=>new Date().toLocaleTimeString([],{hour:"numeric",minute:"2-digit"});
+function msg(t){lastMsg=t;const m=$("#amsg");if(m)m.textContent=t}
+function acct(){
+ $("#acct").innerHTML=au?`<b>Signed in as ${esc(au.user)}</b><p>Your plan syncs to every device where you sign in with this ID.</p><div class="ab"><button data-a="sync">Sync now</button><button data-a="out">Sign out</button></div><div id="amsg" role="status"></div>`
+ :`<b>Sync across devices</b><p>Make your own ID so your plan follows you everywhere. Anyone can create theirs.</p><div class="af"><input id="au" placeholder="Your ID" autocomplete="username" maxlength="24" autocapitalize="none"><input id="ap" type="password" placeholder="Passcode (6+ characters)" autocomplete="current-password"></div><div class="ab"><button data-a="login">Sign in</button><button data-a="reg">Create ID</button></div><div id="amsg" role="status"></div>`;
+ msg(lastMsg)}
+function drop(){au=null;try{localStorage.removeItem(AK)}catch(e){}acct()}
+function fail(e){if(e.status==401){drop();msg("Please sign in again.")}else msg(e.status?e.message:"Can't reach the server. Changes are kept on this device.")}
+let timer=null;
+function sched(){if(!au)return;clearTimeout(timer);timer=setTimeout(push,1200)}
+async function push(){if(!au)return true;try{await api({action:"save",user:au.user,token:au.token,data:snap()});msg("Synced at "+clock());return true}catch(e){fail(e);return false}}
+function adopt(d){Object.assign(st,{done:d.done||{},sel:Number.isInteger(d.sel)?d.sel:0,start:d.start||"",notes:d.notes||{},t:d.t||0});
+ $("#start").value=st.start;try{localStorage.setItem("p10",JSON.stringify(st))}catch(e){}draw()}
+async function pull(){if(!au)return;try{const r=await api({action:"load",user:au.user,token:au.token}),rt=(r.data&&r.data.t)||0;
+ if(rt>(st.t||0)){adopt(r.data);msg("Synced at "+clock())}else if((st.t||0)>rt)await push();else msg("Synced at "+clock())}catch(e){fail(e)}}
+async function enter(kind){
+ const u=($("#au").value||"").trim().toLowerCase(),p=$("#ap").value||"";
+ if(!/^[a-z0-9_.-]{3,24}$/.test(u))return msg("ID: 3–24 letters, numbers, dot, dash or underscore.");
+ if(p.length<6)return msg("Passcode needs at least 6 characters.");
+ document.querySelectorAll(".acct button").forEach(x=>x.disabled=true);msg("Working…");
+ try{const r=await api({action:kind,user:u,pass:p});au={user:u,token:r.token};try{localStorage.setItem(AK,JSON.stringify(au))}catch(e){}
+  lastMsg="";acct();
+  if(kind=="login"&&r.data&&(r.data.t||0)>=(st.t||0)){adopt(r.data);msg("Signed in. Synced at "+clock())}else await push()}
+ catch(e){document.querySelectorAll(".acct button").forEach(x=>x.disabled=false);msg(e.status?e.message:"Can't reach the server. Try again.")}}
+document.addEventListener("click",async e=>{const b=e.target.closest("[data-a]");if(!b)return;const a=b.dataset.a;
+ if(a=="login"||a=="reg")enter(a=="reg"?"register":"login");
+ else if(a=="sync")pull();
+ else if(a=="out"){if(!(await push())){msg("Couldn't sync before signing out. Try again when online.");return}
+  drop();st={done:{},sel:0,start:"",notes:{},t:0};try{localStorage.removeItem("p10")}catch(e){}$("#start").value="";lastMsg="Signed out.";acct();draw()}});
+document.addEventListener("keydown",e=>{if(e.key=="Enter"&&e.target.id=="ap")enter("login")});
+document.addEventListener("visibilitychange",()=>{if(!document.hidden)pull()});
+acct();pull();
+</script></body></html>
